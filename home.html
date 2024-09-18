@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>quiz</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="home.css">
+    </head>
+    <body>
+
+        <nav class="nav-wrapper orange">
+            <div class="container">
+                <a href="#home.html" class="brand-logo center"> Quiz </a>  
+            </div>
+        </nav>
+
+        <section class="container section">
+            <div class="row">
+                <div class="col s12 l6 offset-l3">
+                     <form class="id" name="myform" onsubmit="submitted(event)">
+                        <h4 class="center-align red-text">CONTESTANT NAME</h4>
+
+                        <div class="progress yellow">
+                            <div class="indeterminate orange"></div>
+                        </div>
+
+                        <div class="input-field">
+                            <i class="material-icons white-text prefix">account_box</i>
+                            <input type="text" class="white-text" id="name">
+                            <label for="name">Name here</label>
+                            <p class="center"><button type="submit" class="btn blue"
+                                onclick="this.style.display='none'">submit</button></p>
+                        </div>
+
+                        <div>
+                            <p class="white-text green">Quiz rules :</p>
+                            <p class="black-text white">1.negative marking</p>
+                            <p class="black-text white">2.could complete at right time</p>
+                            <p class="black-text white">3.cut-off is 60%</p>
+                        </div>
+
+                        <div class="progress red">
+                            <div class="indeterminate green"></div>
+                        </div>
+                        <p class="center"><a href="quiz.html" class="btn blue">Let's start</a></p>
+
+                     </form>
+                </div>
+            </div>
+        </section>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <script>
+            function submitted(e){
+                e.preventDefault();
+
+                let namee = document.forms["id"]["name"].value;
+                sessionStorage.setItem("name",namee);
+            }
+        </script>
+
+
+    </body>
+</html>
